@@ -143,4 +143,28 @@ if($_SERVER['REQUEST_METHOD']== 'GET' && $_GET['form_type'] == 'delete_form' )
     exit();
 }
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_type'] == 'add_form') {
+
+    $conn = db_connection();
+    $name = $_POST['name'];
+    $voltage = $_POST['voltage'];
+    $amperage = $_POST['amperage'];
+    $produced = $_POST['produced']; // формат YYYY-MM-DD
+    $all_capacity = $_POST['all_capacity'];
+    $BMS = $_POST['BMS'];
+
+    $sql = "INSERT INTO `product` (`name`,`voltage`,`amperage`,`produced`,`all_capacity`,`bms`) VALUE (?,?,?,?,?,?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssss", $name,$voltage,$amperage,$produced,$all_capacity,$BMS);
+
+    if ($stmt->execute()) {
+        header("location:http://localhost/Battery_CRUD/battery_table.php");
+    } else {
+        echo "Ошибка обновления записи: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+
 ?>
