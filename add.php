@@ -34,7 +34,7 @@
                 <input type="text" class="form-control mb-3" id="name" name="name" placeholder="name">
                 <input type="number" class="form-control mb-3" id="voltage" name="voltage" placeholder="voltage">
                 <input type="number" class="form-control mb-3" id="amperage" name="amperage" placeholder="amperage">
-                <input type="date" class="form-control mb-3" id="produced" name="produced" placeholder="produced">
+                <input type="date" class="form-control mb-3" id="produced" name="produced">
                 <input type="number" class="form-control mb-3" id="all_capacity" name="all_capacity" placeholder="all_capacity">
                 <input type="text" class="form-control mb-3" id="BMS" name="BMS" placeholder="BMS">
             <button class="w-100 btn btn-lg btn-primary" type="submit">Submit Add</button>
