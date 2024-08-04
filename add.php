@@ -22,23 +22,22 @@
         .error {
             color: red;
             font-size: 12px;
-            display: none; /* Initially hidden */
+            display: none;
         }
     </style>
 </head>
 <body>
     <main class="form-editing">
-        <h1 class="h3 mb-3 fw-normal text-center">Battery Edit</h1>
+        <h1 class="h3 mb-3 fw-normal text-center">Battery add</h1>
         <form id="myForm" action="database.php" method="post">
-            <input type="hidden" value="edit_form" name="form_type">
-                <input type="hidden" value="<?= htmlspecialchars($product_id) ?>" name="id">
-                <input value="<?= htmlspecialchars($row['name']) ?>" type="text" class="form-control mb-3" id="name" name="name" placeholder="name">
-                <input value="<?= htmlspecialchars($row['voltage']) ?>" type="number" class="form-control mb-3" id="voltage" name="voltage" placeholder="voltage">
-                <input value="<?= htmlspecialchars($row['amperage']) ?>" type="number" class="form-control mb-3" id="amperage" name="amperage" placeholder="amperage">
-                <input value="<?= htmlspecialchars($row['produced']) ?>" type="date" class="form-control mb-3" id="produced" name="produced" placeholder="produced">
-                <input value="<?= htmlspecialchars($row['all_capacity']) ?>" type="number" class="form-control mb-3" id="all_capacity" name="all_capacity" placeholder="all_capacity">
-                <input value="<?= htmlspecialchars($row['BMS']) ?>" type="text" class="form-control mb-3" id="BMS" name="BMS" placeholder="BMS">
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Submit Edit</button>
+            <input type="hidden" value="add_form" name="form_type">
+                <input type="text" class="form-control mb-3" id="name" name="name" placeholder="name">
+                <input type="number" class="form-control mb-3" id="voltage" name="voltage" placeholder="voltage">
+                <input type="number" class="form-control mb-3" id="amperage" name="amperage" placeholder="amperage">
+                <input type="date" class="form-control mb-3" id="produced" name="produced" placeholder="produced">
+                <input type="number" class="form-control mb-3" id="all_capacity" name="all_capacity" placeholder="all_capacity">
+                <input type="text" class="form-control mb-3" id="BMS" name="BMS" placeholder="BMS">
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Submit Add</button>
         </form>
     </main>
     <!-- Подключение Bootstrap JS и зависимости -->
