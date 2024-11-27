@@ -54,21 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['action'] == 'read') {
     
         return $prepared_data;
     }
-
-    function renderTableCell($column, $row) {
-        if (isset($row["{$column}_link"])) {
-            $link = htmlspecialchars($row["{$column}_link"]);
-            $display = htmlspecialchars($row["{$column}_display"]);
-            return "<td><a href=\"{$link}\" target=\"_blank\">{$display}</a></td>";
-        } elseif ($column === 'image_path' && !empty($row[$column])) {
-            $image = htmlspecialchars($row[$column]);
-            return "<td><img src=\"{$image}\" alt=\"Image\" style=\"max-width: 100px; max-height: 100px;\"></td>";
-        } else {
-            $content = htmlspecialchars($row[$column]);
-            return "<td>{$content}</td>";
-        }
-    }
-
     $prepared_data = prepareDataForView($data_result, $primaryKey, $foreign_key_names);
     include 'read.php';
 }
