@@ -1,7 +1,6 @@
 <?php
 include_once 'actions.php';
 
-//Подключение к базе данных
 $database = new Database();
 $db = $database->getConnection();
 
@@ -12,28 +11,6 @@ $reference_columns = [
     'customers' => 'FirstName',
     'orders' => 'OrderID'
 ];
- kvd fkvfdvdfvmdkvmdfk
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     djhvbfjoddddddsvbfshjdvbdshjvbfhbdfbsd
-
 //чтение записи ----------------------------------------------------------------------------------------------------------------------------
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['action'] == 'read') {
