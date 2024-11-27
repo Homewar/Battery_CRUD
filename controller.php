@@ -13,6 +13,10 @@ $reference_columns = [
 ];
  kvd fkvfdvdfvmdkvmdfk
 
+
+
+
+     mv dnfvjndfjvndkjvndkjvndkjvnkfdjn
 nn bnrgrbrgkjbnrb
 //чтение записи ----------------------------------------------------------------------------------------------------------------------------
 
