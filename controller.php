@@ -1,18 +1,6 @@
 <?php
 include_once 'actions.php';
 
-//Подключение к базе данных
-$database = new Database();
-$db = $database->getConnection();
-
-//Список столбцов на которые надо заменить id
-$reference_columns = [
-    'manufacturers' => 'ManufacturerName',
-    'watches' => 'Model',
-    'customers' => 'FirstName',
-    'orders' => 'OrderID'
-];
-
 //чтение записи ----------------------------------------------------------------------------------------------------------------------------
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['action'] == 'read') {
