@@ -11,13 +11,6 @@ $reference_columns = [
     'customers' => 'FirstName',
     'orders' => 'OrderID'
 ];
- kvd fkvfdvdfvmdkvmdfk
-
-
-
-
-     mv dnfvjndfjvndkjvndkjvndkjvnkfdjn
-nn bnrgrbrgkjbnrb
 //чтение записи ----------------------------------------------------------------------------------------------------------------------------
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['action'] == 'read') {
