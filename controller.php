@@ -14,6 +14,26 @@ $reference_columns = [
 ];
  kvd fkvfdvdfvmdkvmdfk
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     djhvbfjoddddddsvbfshjdvbdshjvbfhbdfbsd
+
 //чтение записи ----------------------------------------------------------------------------------------------------------------------------
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['action'] == 'read') {
